@@ -23,7 +23,7 @@
 // 
 // Version: 19.10.27
 // EndLic
-ï»¿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -31,11 +31,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AltDir")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Alternate Directory")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AltDir")]
-[assembly: AssemblyCopyright("Copyright Â©  2019")]
+[assembly: AssemblyCopyright("Copyright (c) Jeroen P. Broks  2019, licensed under the terms of the GPL 3")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
