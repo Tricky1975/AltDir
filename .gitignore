@@ -259,3 +259,13 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+
+# Ignore MKL crap
+MKL*
+*MKL*
+
+# In case you use a Mac, I don't want any for these totally unneed crappy files
+.DS_Store
+._*
+
