@@ -44,6 +44,27 @@ namespace AltDir {
             Dirry.InitAltDrives();
             MKL.Lic    ("Alternate Dir - Program.cs","GNU General Public License 3");
             MKL.Version("Alternate Dir - Program.cs","19.10.27");
+            fp.CrBool("p", false);
+            fp.CrBool("all", false);
+            fp.CrBool("ansi", OnWindows);
+            fp.CrBool("s", false);
+            fp.CrBool("w", false);
+            fp.CrBool("b", false);
+            fp.CrBool("h", false);
+            fp.Parse();
+        }
+
+        bool OnWindows { get {
+                switch (Environment.OSVersion.Platform) {
+                    case PlatformID.Win32NT:
+                    case PlatformID.Win32S:
+                    case PlatformID.Win32Windows:
+                    case PlatformID.WinCE:
+                        return true;
+                    default:
+                        return false;
+                }
+            }
         }
 
         // Easy way to support Wild Cards... Although this is strictly speaking a Visual Basic routine, but who cares, this is the power of .NET :P
@@ -54,7 +75,7 @@ namespace AltDir {
         void Header() {
             QCol.Yellow("Alternate Directory\t");
             QCol.Cyan($"Version {MKL.Newest}\n");
-            QCol.Magenta("Coded and copyrighted by: Jeroen P. Broks\n");
+            QCol.Magenta($"Coded and copyrighted {MKL.CYear(2019)} by: Jeroen P. Broks\n");
             QCol.Green("Licensed and released under terms of the GPL 3\n\n");
         }
 
@@ -66,10 +87,17 @@ namespace AltDir {
             QCol.Cyan("-ansi\t"); QCol.Yellow("Use ANSI in stead of standard Windows Console colors (default on non-Windows systems)\n");
             QCol.Cyan("-w\t"); QCol.Yellow("Wide view\n");
             QCol.Cyan("-s\t"); QCol.Yellow("Recursive\n");
-            QCol.Cyan("-b\t"); QCol.Yellow("Show file names only without any info");
+            QCol.Cyan("-b\t"); QCol.Yellow("Show file names only without any info\n\n");
+            QCol.Green($"{MKL.All()}\n\n");
         }
 
-        void RunMain() { }
+        void RunMain() {
+            if (fp.GetBool("h")) {
+                HelpScreen();
+                TrickyDebug.AttachWait();
+                return;
+            }
+        }
 
         static void Main(string[] args) => (new Program(args)).RunMain(); // Don't want statics, just ignore this line. It's there because C# needs it!
             
