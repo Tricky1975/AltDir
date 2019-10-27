@@ -64,6 +64,9 @@
     <Compile Include="..\TrickyUnits\qstream.cs">
       <Link>Units\qstream.cs</Link>
     </Compile>
+    <Compile Include="..\TrickyUnits\QuickConsoleColors.cs">
+      <Link>Units\QuickConsoleColors.cs</Link>
+    </Compile>
     <Compile Include="..\TrickyUnits\TrickyDbg.cs">
       <Link>Units\TrickyDbg.cs</Link>
     </Compile>
