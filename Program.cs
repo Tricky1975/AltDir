@@ -32,14 +32,25 @@ using TrickyUnits;
 
 namespace AltDir {
     class Program {
+
+        readonly FlagParse fp;
+
         private Program(string[] args) {
+            fp = new FlagParse(args);
             Dirry.InitAltDrives();
             MKL.Lic    ("Alternate Dir - Program.cs","GNU General Public License 3");
             MKL.Version("Alternate Dir - Program.cs","19.10.27");
         }
 
-        void HelpScreen() {
+        void Header() {
+            QCol.Yellow("Alternate Directory\t");
+            QCol.Cyan($"Version {MKL.Newest}\n");
+            QCol.Magenta("Coded and copyrighted by: Jeroen P. Broks\n");
+            QCol.Green("Licensed and released under terms of the GPL 3\n\n");
+        }
 
+        void HelpScreen() {
+            Header();
         }
 
         void RunMain() { }
