@@ -23,7 +23,7 @@
 // 
 // Version: 19.10.27
 // EndLic
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,8 +33,13 @@ using TrickyUnits;
 namespace AltDir {
     class Program {
         private Program(string[] args) {
+            Dirry.InitAltDrives();
             MKL.Lic    ("Alternate Dir - Program.cs","GNU General Public License 3");
             MKL.Version("Alternate Dir - Program.cs","19.10.27");
+        }
+
+        void HelpScreen() {
+
         }
 
         void RunMain() { }
