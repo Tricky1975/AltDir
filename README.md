@@ -6,4 +6,4 @@ More info will be added later!
 
 # WIP
 
-Don't expect this to work properly... It it works at all!
+Don't expect this to work properly... If it works at all!
