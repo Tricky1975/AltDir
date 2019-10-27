@@ -28,7 +28,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using Microsoft.VisualBasic.CompilerServices;
+
 using TrickyUnits;
+
 
 namespace AltDir {
     class Program {
@@ -42,6 +46,11 @@ namespace AltDir {
             MKL.Version("Alternate Dir - Program.cs","19.10.27");
         }
 
+        // Easy way to support Wild Cards... Although this is strictly speaking a Visual Basic routine, but who cares, this is the power of .NET :P
+        bool WC_Match(string WildCardString,string ChkString) {
+            return LikeOperator.LikeString(ChkString, WildCardString, Microsoft.VisualBasic.CompareMethod.Binary);
+        }
+
         void Header() {
             QCol.Yellow("Alternate Directory\t");
             QCol.Cyan($"Version {MKL.Newest}\n");
@@ -51,6 +60,13 @@ namespace AltDir {
 
         void HelpScreen() {
             Header();
+            QCol.Red("Usage: "); QCol.Yellow(qstr.StripDir(qstr.StripExt(MKL.MyExe))); QCol.Magenta(" [<switches>] "); QCol.Cyan("[<files/folder>]\n\n");
+            QCol.Cyan("-p\t"); QCol.Yellow("Page based output\n");
+            QCol.Cyan("-all\t"); QCol.Yellow("List all found files, regardless of them being hidden or not (Hidden in Unix terms, so starting with a .)\n");
+            QCol.Cyan("-ansi\t"); QCol.Yellow("Use ANSI in stead of standard Windows Console colors (default on non-Windows systems)\n");
+            QCol.Cyan("-w\t"); QCol.Yellow("Wide view\n");
+            QCol.Cyan("-s\t"); QCol.Yellow("Recursive\n");
+            QCol.Cyan("-b\t"); QCol.Yellow("Show file names only without any info");
         }
 
         void RunMain() { }
