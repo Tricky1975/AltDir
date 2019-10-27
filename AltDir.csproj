@@ -43,28 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\TrickyUnits\Dirry.cs">
+    <Compile Include="..\TrickyUnits\Dirry.cs">
       <Link>Units\Dirry.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\FlagParse.cs">
+    <Compile Include="..\TrickyUnits\FlagParse.cs">
       <Link>Units\FlagParse.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\GINI Is Not Ini.cs">
+    <Compile Include="..\TrickyUnits\GINI Is Not Ini.cs">
       <Link>Units\GINI Is Not Ini.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\Maps.cs">
+    <Compile Include="..\TrickyUnits\Maps.cs">
       <Link>Units\Maps.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\mkl.cs">
+    <Compile Include="..\TrickyUnits\mkl.cs">
       <Link>Units\mkl.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\qstr.cs">
+    <Compile Include="..\TrickyUnits\qstr.cs">
       <Link>Units\qstr.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\qstream.cs">
+    <Compile Include="..\TrickyUnits\qstream.cs">
       <Link>Units\qstream.cs</Link>
     </Compile>
-    <Compile Include="..\..\TrickyUnits\TrickyDbg.cs">
+    <Compile Include="..\TrickyUnits\TrickyDbg.cs">
       <Link>Units\TrickyDbg.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
