@@ -43,11 +43,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\TrickyUnits\Dirry.cs">
+      <Link>Units\Dirry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\FlagParse.cs">
+      <Link>Units\FlagParse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\GINI Is Not Ini.cs">
+      <Link>Units\GINI Is Not Ini.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\Maps.cs">
+      <Link>Units\Maps.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\mkl.cs">
+      <Link>Units\mkl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\qstr.cs">
+      <Link>Units\qstr.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\qstream.cs">
+      <Link>Units\qstream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\TrickyUnits\TrickyDbg.cs">
+      <Link>Units\TrickyDbg.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
